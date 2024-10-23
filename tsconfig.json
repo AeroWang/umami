@@ -3,7 +3,7 @@
     "target": "es2021",
     "outDir": "./build",
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -36,8 +36,18 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "types": ["@cloudflare/workers-types/2023-07-01"]
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts", ".next/types/**/*.ts"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "env.d.ts",
+    "next.config.mjs"
+  ],
   "exclude": ["node_modules", "./cypress.config.ts", "cypress"]
 }

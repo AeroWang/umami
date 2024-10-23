@@ -1,5 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { ok, methodNotAllowed } from 'next-basics';
+// import { getRequestContext } from '@cloudflare/next-on-pages';
+
+export const runtime = 'edge';
 
 export interface ConfigResponse {
   telemetryDisabled: boolean;
@@ -17,6 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<ConfigResponse>)
       updatesDisabled: !!process.env.DISABLE_UPDATES,
     });
   }
+  // const { env, cf, ctx } = getRequestContext();
 
   return methodNotAllowed(res);
 };

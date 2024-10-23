@@ -7,6 +7,7 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -28,10 +29,18 @@
     "plugin:import/typescript",
     "plugin:css-modules/recommended",
     "plugin:cypress/recommended",
+    "plugin:eslint-plugin-next-on-pages/recommended",
     "prettier",
     "next"
   ],
-  "plugins": ["@typescript-eslint", "prettier", "promise", "css-modules", "cypress"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "promise",
+    "css-modules",
+    "cypress",
+    "eslint-plugin-next-on-pages"
+  ],
   "rules": {
     "no-console": "error",
     "react/display-name": "off",

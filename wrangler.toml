@@ -1,0 +1,10 @@
+name = "umami"
+compatibility_date = "2024-09-02"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "umami"
+database_id = "7b0b2f6e-afb4-40e3-80a4-ac1675cc6fb8"
+migrations_dir = "d1-migrations"
